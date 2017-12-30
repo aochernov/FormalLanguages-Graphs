@@ -1,0 +1,10 @@
+digraph g {
+0[label="S", color="green", shape="doublecircle"];
+1;
+2;
+3[label="S",shape="doublecircle"];
+
+0 -> 1 [label = "s"];
+1 -> 2 [label = "S"];
+2 -> 3 [label = "s"];
+} 

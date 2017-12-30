@@ -1,0 +1,15 @@
+digraph g {
+0;
+1;
+2;
+3;
+4;
+5;
+
+0 -> 1 [label = "s"]
+1 -> 5 [label = "s"]
+1 -> 2 [label = "s"]
+2 -> 3 [label = "s"]
+3 -> 4 [label = "s"]
+4 -> 1 [label = "s"]
+}

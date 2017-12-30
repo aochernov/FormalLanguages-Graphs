@@ -1,0 +1,7 @@
+S : B X
+S : 3
+B : Y X
+B : Y Z
+Z : B X
+Y : 4
+X : 3
