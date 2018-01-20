@@ -1,2 +1,4 @@
-S : s S s
+S : A B
+A : B S
+B : a
 S : eps

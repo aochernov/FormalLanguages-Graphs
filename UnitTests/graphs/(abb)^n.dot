@@ -1,0 +1,9 @@
+digraph g {
+0;
+1;
+2;
+
+0 -> 1 [label = "a"]
+1 -> 2 [label = "b"]
+2 -> 0 [label = "b"]
+}

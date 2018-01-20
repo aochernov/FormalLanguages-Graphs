@@ -1,0 +1,5 @@
+S : A X
+A : a
+X : b
+X : S B
+B : b

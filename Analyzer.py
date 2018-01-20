@@ -155,8 +155,8 @@ def FindWays(Edges, StartNodes, FinalNodes, Nodes, ways):
 				if StartNodes[Node] == FinalNodes[j]:
 					(GraphBegin, AutBegin) = Node
 					(GraphEnd, AutEnd) = j
-					if not ((GraphBegin, StartNodes[i], GraphEnd) in ways):
-						res.append((GraphBegin, StartNodes[i], GraphEnd))
+					if not ((GraphBegin, StartNodes[Node], GraphEnd) in ways):
+						res.append((GraphBegin, StartNodes[Node], GraphEnd))
 						repeat = True
 	return (res, repeat)
 
@@ -165,6 +165,12 @@ def BottomUpAnalysis(name, nodes, edges):
 	(AutNodes, AutEdges, AutStartNodes, AutFinalNodes) = ParseGraph(automaton)
 	Edges = edges.copy()
 	ways = set()
+	for k in AutStartNodes:
+		for j in AutFinalNodes:
+			if k == j:
+				for i in nodes:
+					Edges.append((i, AutStartNodes[k], i))
+					ways.add((i, AutStartNodes[k], i))
 	flag = True
 	while flag:
 		(ProductEdges, ProductNodes, ProductStarts, ProductFinals) = GraphProduct(Edges, AutEdges, AutStartNodes, AutFinalNodes)
